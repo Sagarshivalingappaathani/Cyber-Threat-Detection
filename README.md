@@ -82,4 +82,16 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 | Worms             | 99.98        | 99.98      | 99.98          | 99.98        |
 | Exploit           | 94.54        | 99.27      | 90.70          | 94.79        |
 
- 
+ ## Model Comparison for Attack Prediction
+
+| Model                      | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) | Time to Train (s) | Time to Predict (s) | Total Time (s) |
+|---------------------------|--------------|------------|----------------|--------------|------------------|--------------------|----------------|
+| Logistic                   | 92.80        | 92.80      | 92.84          | 92.81        | 4.3               | 0.0                 | 4.3            |
+| kNN                        | 95.04        | 95.04      | 95.09          | 95.05        | 0.0               | 2.5                 | 2.5            |
+| Decision Tree              | 96.54        | 96.54      | 96.54          | 96.54        | 1.2               | 0.0                 | 1.2            |
+| Random Forest              | 97.67        | 97.67      | 97.68          | 97.67        | 5.3               | 0.2                 | 5.5            |
+| Gradient Boosting Classifier| 95.80       | 95.80      | 95.80          | 95.80        | 55.1              | 0.0                 | 55.1           |
+| XGBoost Classifier         | 97.80        | 97.80      | 97.81          | 97.80        | 2.0               | 0.0                 | 2.0            |
+| AdaBoost Classifier        | 91.97        | 91.97      | 91.98          | 91.97        | 7.9               | 0.1                 | 8.0            |
+| MLP                        | 96.34        | 96.34      | 96.39          | 96.34        | 28.1              | 0.0                 | 28.1           |
+| MLP (Keras)                | 96.21        | 96.21      | 96.21          | 96.21        | 19.6              | 0.7                 | 20.4           |
