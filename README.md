@@ -70,8 +70,9 @@ This table shows the performance of various models in predicting whether a conne
 
 ---
 
-## 2. XGBoost Model Performance on Different Attack Types (Multi-class Classification)
-This table breaks down the performance of the XGBoost model for each of the 9 attack types.
+## 2. XGBoost Model Performance on Individual Attack Types (Binary Classification)
+This table shows the performance of 9 separate binary classification models, each trained to detect a specific attack type versus all other traffic.
+
 
 | Attack Category   | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) |
 |------------------|--------------|------------|----------------|--------------|
@@ -87,8 +88,8 @@ This table breaks down the performance of the XGBoost model for each of the 9 at
 
 ---
 
-## 3. Random Forest Model Performance on Different Attack Types (Multi-class Classification)
-This table provides the performance of the Random Forest model across the 9 attack types.
+## 2. Random Forest Performance on Individual Attack Types (Binary Classification)
+This table shows the performance of 9 separate binary classification models, each trained to detect a specific attack type versus all other traffic.
 
 | Attack Category   | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) |
 |------------------|--------------|------------|----------------|--------------|
@@ -101,50 +102,3 @@ This table provides the performance of the Random Forest model across the 9 atta
 | Shellcode         | 99.81        | 99.99      | 99.64          | 99.81        |
 | Worms             | 99.98        | 99.98      | 99.98          | 99.98        |
 | Exploit           | 94.54        | 99.27      | 90.70          | 94.79        |
-
-
-## Model Performance on Attack Detection
-
-## XGBoost 
-
-| Attack Category   | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) |
-|------------------|--------------|------------|----------------|--------------|
-| DOS               | 95.54        | 97.86      | 93.53          | 95.64        |
-| Fuzzers           | 97.72        | 98.83      | 96.68          | 97.74        |
-| Generic           | 99.48        | 99.29      | 99.67          | 99.48        |
-| Analysis          | 97.45        | 99.60      | 95.50          | 97.50        |
-| Reconnaissance    | 98.64        | 98.18      | 99.10          | 98.64        |
-| Backdoor          | 97.96        | 99.88      | 96.19          | 98.00        |
-| Shellcode         | 99.78        | 99.96      | 99.60          | 99.78        |
-| Worms             | 99.96        | 99.99      | 99.93          | 99.96        |
-| Exploit           | 94.84        | 99.52      | 91.00          | 95.07        |
-
----
-
-## Random Forest
-
-| Attack Category   | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) |
-|------------------|--------------|------------|----------------|--------------|
-| DOS               | 94.55        | 99.29      | 90.70          | 94.80        |
-| Fuzzers           | 97.69        | 98.81      | 96.65          | 97.72        |
-| Generic           | 99.50        | 99.16      | 99.83          | 99.49        |
-| Analysis          | 97.52        | 99.68      | 95.55          | 97.57        |
-| Reconnaissance    | 98.55        | 98.09      | 99.01          | 98.55        |
-| Backdoor          | 98.02        | 99.90      | 96.27          | 98.05        |
-| Shellcode         | 99.81        | 99.99      | 99.64          | 99.81        |
-| Worms             | 99.98        | 99.98      | 99.98          | 99.98        |
-| Exploit           | 94.54        | 99.27      | 90.70          | 94.79        |
-
- ## Model Comparison for Attack Prediction
-
-| Model                      | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) | Time to Train (s) | Time to Predict (s) | Total Time (s) |
-|---------------------------|--------------|------------|----------------|--------------|------------------|--------------------|----------------|
-| Logistic                   | 92.80        | 92.80      | 92.84          | 92.81        | 4.3               | 0.0                 | 4.3            |
-| kNN                        | 95.04        | 95.04      | 95.09          | 95.05        | 0.0               | 2.5                 | 2.5            |
-| Decision Tree              | 96.54        | 96.54      | 96.54          | 96.54        | 1.2               | 0.0                 | 1.2            |
-| Random Forest              | 97.67        | 97.67      | 97.68          | 97.67        | 5.3               | 0.2                 | 5.5            |
-| Gradient Boosting Classifier| 95.80       | 95.80      | 95.80          | 95.80        | 55.1              | 0.0                 | 55.1           |
-| XGBoost Classifier         | 97.80        | 97.80      | 97.81          | 97.80        | 2.0               | 0.0                 | 2.0            |
-| AdaBoost Classifier        | 91.97        | 91.97      | 91.98          | 91.97        | 7.9               | 0.1                 | 8.0            |
-| MLP                        | 96.34        | 96.34      | 96.39          | 96.34        | 28.1              | 0.0                 | 28.1           |
-| MLP (Keras)                | 96.21        | 96.21      | 96.21          | 96.21        | 19.6              | 0.7                 | 20.4           |
