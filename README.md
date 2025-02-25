@@ -14,9 +14,17 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 
 ## 9 Types Attacks
 
+- **DoS (Denial of Service):**  
+  Overwhelming a website or network with too much traffic, making it slow or unavailable.  
+  _Example:_ An online shopping website gets flooded with millions of fake requests at once, making the site so slow that real customers can’t access it. This is like hundreds of people blocking a store’s entrance so no one else can get inside.
+
 - **Fuzzers:**  
   These attacks send random or unexpected data to a system to see how it reacts and find weaknesses.  
   _Example:_ Imagine a website’s contact form. A fuzzer attack would enter strange symbols, extremely long text, or unexpected data types to crash the website or make it behave oddly — revealing vulnerabilities developers didn’t expect.  
+
+- **Generic:**  
+  Attacks on encrypted data by trying every possible password or key until one works.  
+  _Example:_ A hacker uses a **brute-force attack** on an email account by trying thousands of common passwords until they find the right one. It’s like trying every key on a keychain until one unlocks the door.
 
 - **Analysis:**  
   Scanning a network to gather information and identify weak points.  
@@ -25,14 +33,6 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 - **Backdoors:**  
   Secret, unauthorized ways to access a system without going through normal security.  
   _Example:_ A hacker installs a hidden program on a computer that creates a secret login route. This lets them enter the system without needing a username or password, even after security updates are applied.  
-
-- **DoS (Denial of Service):**  
-  Overwhelming a website or network with too much traffic, making it slow or unavailable.  
-  _Example:_ An online shopping website gets flooded with millions of fake requests at once, making the site so slow that real customers can’t access it. This is like hundreds of people blocking a store’s entrance so no one else can get inside.
-
-- **Generic:**  
-  Attacks on encrypted data by trying every possible password or key until one works.  
-  _Example:_ A hacker uses a **brute-force attack** on an email account by trying thousands of common passwords until they find the right one. It’s like trying every key on a keychain until one unlocks the door. 
 
 - **Exploits:**  
   Taking advantage of bugs or flaws in software to gain control or cause damage.  
@@ -64,7 +64,7 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 | Backdoor          | 97.96        | 99.88      | 96.19          | 98.00        |
 | Shellcode         | 99.78        | 99.96      | 99.60          | 99.78        |
 | Worms             | 99.96        | 99.99      | 99.93          | 99.96        |
-| Normal            | 100.00       | 100.00     | 100.00         | 100.00       |
+| Exploit           | 94.84        | 99.52      | 91.00          | 95.07        |
 
 ---
 
@@ -80,6 +80,6 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 | Backdoor          | 98.02        | 99.90      | 96.27          | 98.05        |
 | Shellcode         | 99.81        | 99.99      | 99.64          | 99.81        |
 | Worms             | 99.98        | 99.98      | 99.98          | 99.98        |
-| Normal            | 100.00       | 100.00     | 100.00         | 100.00       |
+| Exploit           | 94.54        | 99.27      | 90.70          | 94.79        |
 
  
