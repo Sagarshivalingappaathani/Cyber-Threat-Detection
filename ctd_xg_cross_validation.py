@@ -16,7 +16,7 @@ pd.set_option('display.expand_frame_repr', False)
 
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv('./UNSW_NB15_training-set.csv')
+df = pd.read_csv('unsw_nb15_dataset.csv')
 df.drop(['id', 'attack_cat'], axis=1, inplace=True)
 
 df_numeric = df.select_dtypes(include=[np.number])
