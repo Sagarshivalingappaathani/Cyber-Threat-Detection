@@ -83,7 +83,3 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 | Normal            | 100.00       | 100.00     | 100.00         | 100.00       |
 
  
-
-
-![Alt text](xgboost_performance.png)
-![Alt text](random_forest_performance.png)
