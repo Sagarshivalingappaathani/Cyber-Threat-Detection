@@ -50,7 +50,84 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
 
 - **Worms:**  
   A type of virus that spreads from one computer to another on its own, without anyone clicking or opening anything.  
-  _Example:_ The **WannaCry** worm spread to thousands of computers by taking advantage of a weakness in Windows. It locked people’s files and asked for money to unlock them.  
+  _Example:_ The **WannaCry** worm spread to thousands of computers by taking advantage of a weakness in Windows. It locked people’s files and asked for money to unlock them.
+
+## Features
+
+### Basic Connection Information
+| Feature      | Description              |
+|--------------|-------------------------|
+| srcip        | Source IP Address        |
+| sport        | Source Port              |
+| dstip        | Destination IP Address   |
+| dsport       | Destination Port         |
+| proto        | Protocol Type            |
+| state        | State of the Connection  |
+| dur          | Duration of Connection   |
+
+### Packet-Level Features
+| Feature      | Description              |
+|--------------|-------------------------|
+| sttl         | Source Time-to-Live      |
+| dttl         | Destination Time-to-Live |
+| sloss        | Source Packet Loss       |
+| dloss        | Destination Packet Loss  |
+| sinpkt       | Source Inter-Packet Time |
+| dinpkt       | Destination Inter-Packet Time |
+
+### Byte-Level Features
+| Feature      | Description              |
+|--------------|-------------------------|
+| sbytes       | Source Bytes Sent        |
+| dbytes       | Destination Bytes Sent   |
+| smean        | Mean Size of Source Packets |
+| dmean        | Mean Size of Destination Packets |
+
+### Flow-Level Features
+| Feature          | Description                   |
+|------------------|------------------------------|
+| rate             | Connection Rate              |
+| sload            | Source Load                  |
+| trans_depth      | HTTP Transaction Depth       |
+| response_body_len| Length of HTTP Response Body |
+
+### Timing Features
+| Feature      | Description              |
+|--------------|-------------------------|
+| sjit         | Source Jitter            |
+| djit         | Destination Jitter       |
+| tcprtt       | TCP Round Trip Time      |
+| synack       | SYN-ACK Time             |
+| ackdat       | ACK Data Time            |
+
+### Count-Based Features
+| Feature          | Description                   |
+|------------------|------------------------------|
+| ct_src_ltm       | Count of Connections from Source in Last Time Interval |
+| ct_dst_ltm       | Count of Connections to Destination in Last Time Interval |
+| ct_srv_src       | Count of Services from Source |
+| ct_srv_dst       | Count of Services to Destination |
+| ct_srv_dst       | Count of Services to Destination |
+| ct_src_ltm       | Count of Source Connections   |
+| ct_dst_ltm       | Count of Destination Connections |
+| ct_dst_sport_ltm | Count of Destination Ports    |
+| ct_dst_src_ltm   | Count of Source-Destination Pairs |
+
+### Categorical and Boolean Features
+| Feature          | Description                   |
+|------------------|------------------------------|
+| is_sm_ips_ports  | Same Source/Destination Port  |
+| is_ftp_login     | FTP Login Attempt             |
+| ct_ftp_cmd       | FTP Command Count             |
+| ct_flw_http_mthd | HTTP Method Count             |
+
+### Target Variables
+| Feature      | Description              |
+|--------------|-------------------------|
+| attack_cat   | Category of Attack       |
+| label        | Attack or Normal Label   |
+
+
 
 ## Feature Engineering
 
