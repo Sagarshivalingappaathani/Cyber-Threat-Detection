@@ -50,6 +50,42 @@ The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset)
   A type of virus that spreads from one computer to another on its own, without anyone clicking or opening anything.  
   _Example:_ The **WannaCry** worm spread to thousands of computers by taking advantage of a weakness in Windows. It locked people’s files and asked for money to unlock them.  
 
+## Feature Engineering
+
+To prepare the dataset for effective model training and improve predictive performance, we applied several feature engineering techniques, including transformations, encoding, feature selection, and handling class imbalance.
+
+### 1. Handling Numerical Features
+- **Clamping Extreme Values:**  
+  For numerical features with extreme outliers:
+  - If the maximum value of a feature is more than 10 times its median and greater than 10, we clamp the extreme values at the 95th percentile.
+- **Log Transformation:**  
+  For numerical features with a wide range of values:
+  - Applied log transformation (`log(x + 1)`) to reduce skewness, ensuring values start from zero when needed.
+
+### 2. Handling Categorical Features
+- **Limiting Unique Values:**  
+  For categorical features with more than 6 unique values:
+  - Grouped less frequent categories into a single category represented by `'-'`.
+
+- **One-Hot Encoding:**  
+  Applied one-hot encoding to convert categorical features into a numerical format suitable for machine learning algorithms.  
+  Used `ColumnTransformer` with `OneHotEncoder` to handle unknown categories gracefully.
+
+### 3. Feature Selection
+- **Chi-Square Test:**  
+  Used the chi-square test for feature importance and selected the best features for the model.
+  Applied `SelectKBest` with the chi-square (`chi2`) score function.
+
+### 4. Feature Scaling
+- **Standardization:**  
+  Standardized the numerical features to ensure they have a mean of 0 and a standard deviation of 1 using `StandardScaler`.
+
+### 5. Handling Class Imbalance
+- **Synthetic Minority Over-sampling Technique (SMOTE):**  
+  Balanced the dataset by generating synthetic samples for the minority class, ensuring the model doesn’t get biased toward the majority class.
+
+This feature engineering pipeline significantly enhances the quality and balance of the dataset, making it well-suited for building robust and accurate machine learning models.
+
 
 # Attack Detection Model Performance
 
