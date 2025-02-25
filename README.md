@@ -1,4 +1,6 @@
 # Cyber-Threat-Detection
+This project aims to build a machine learning-based system to detect cyber threats using the UNSW-NB15 dataset. It classifies network traffic as either normal or one of nine types of attacks, like DOS, Fuzzers, and Exploits. By applying advanced models and effective feature engineering, the system improves detection accuracy and helps identify different attack types more efficiently.
+
 ## About Dataset
 The [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-dataset) is a widely used dataset for evaluating network intrusion detection systems (NIDS). It was created by the **Australian Centre for Cyber Security (ACCS)** and is designed to address the limitations of older datasets like **KDDCup99** and **NSL-KDD** by providing a more realistic and diverse representation of modern network traffic and attack behaviors.  
 
