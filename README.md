@@ -126,7 +126,7 @@ This table shows the performance of 9 separate binary classification models, eac
 
 ---
 
-## 2. Random Forest Performance on Individual Attack Types (Binary Classification)
+## 3. Random Forest Performance on Individual Attack Types (Binary Classification)
 This table shows the performance of 9 separate binary classification models, each trained to detect a specific attack type versus all other traffic.
 
 | Attack Category   | Accuracy (%) | Recall (%) | Precision (%) | F1-Score (%) |
