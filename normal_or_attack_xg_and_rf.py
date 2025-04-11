@@ -10,7 +10,7 @@ from xgboost import XGBClassifier
 from imblearn.over_sampling import SMOTE
 from sklearn.ensemble import RandomForestClassifier  # New import for RF
 
-# Display options
+# Display option
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.expand_frame_repr', False)
@@ -94,20 +94,20 @@ print("Precision: ", "{:.2%}".format(precision_xgb))
 print("F1-Score: ", "{:.2%}".format(f1s_xgb))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_xgb))
 
-# ---------------------- Random Forest Model ----------------------
-rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
-rf_model.fit(X_train, y_train)
-y_pred_rf = rf_model.predict(X_test)
+# # ---------------------- Random Forest Model ----------------------
+# rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+# rf_model.fit(X_train, y_train)
+# y_pred_rf = rf_model.predict(X_test)
 
-# Evaluate Random Forest model
-accuracy_rf = accuracy_score(y_test, y_pred_rf)
-recall_rf = recall_score(y_test, y_pred_rf)
-precision_rf = precision_score(y_test, y_pred_rf)
-f1s_rf = f1_score(y_test, y_pred_rf)
+# # Evaluate Random Forest model
+# accuracy_rf = accuracy_score(y_test, y_pred_rf)
+# recall_rf = recall_score(y_test, y_pred_rf)
+# precision_rf = precision_score(y_test, y_pred_rf)
+# f1s_rf = f1_score(y_test, y_pred_rf)
 
-print("\nRandom Forest Model Performance:")
-print("Accuracy: ", "{:.2%}".format(accuracy_rf))
-print("Recall: ", "{:.2%}".format(recall_rf))
-print("Precision: ", "{:.2%}".format(precision_rf))
-print("F1-Score: ", "{:.2%}".format(f1s_rf))
-print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_rf))
+# print("\nRandom Forest Model Performance:")
+# print("Accuracy: ", "{:.2%}".format(accuracy_rf))
+# print("Recall: ", "{:.2%}".format(recall_rf))
+# print("Precision: ", "{:.2%}".format(precision_rf))
+# print("F1-Score: ", "{:.2%}".format(f1s_rf))
+# print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_rf))

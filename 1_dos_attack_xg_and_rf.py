@@ -41,7 +41,7 @@ for feature in df_cat.columns:
     if df_cat[feature].nunique() > 6:
         df[feature] = np.where(df[feature].isin(df[feature].value_counts().head().index), df[feature], '-')
 
-# Apply One-Hot Encoding to categorical features
+# Apply One-Hot Encoding to categorical feature
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(handle_unknown='ignore'), df.select_dtypes(exclude=[np.number]).columns)], remainder='passthrough')
 X = np.array(ct.fit_transform(df.drop(columns=['is_ddos'])))
 y = df['is_ddos']

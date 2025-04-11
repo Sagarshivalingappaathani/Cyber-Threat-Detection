@@ -10,7 +10,7 @@ from xgboost import XGBClassifier
 from imblearn.over_sampling import SMOTE
 from sklearn.ensemble import RandomForestClassifier  # New import for RF
 
-# Display options
+# Display option
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.expand_frame_repr', False)

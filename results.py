@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Data for XGBoost Model
+# Data for XGBoost Models
 xgboost_data = {
     "Attack Category": ["DOS", "Fuzzers", "Generic", "Analysis", "Reconnaissance", "Backdoor", "Shellcode", "Worms", "Normal"],
     "Accuracy (%)": [95.54, 97.72, 99.48, 97.45, 98.64, 97.96, 99.78, 99.96, 100.00],
